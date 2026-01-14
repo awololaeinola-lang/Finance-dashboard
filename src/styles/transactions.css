@@ -1,0 +1,41 @@
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.table-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-size: 14px;
+  color: #6b7280;
+  padding-bottom: 12px;
+}
+
+td {
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.income {
+  color: green;
+  font-weight: 600;
+}
+
+.expense {
+  color: red;
+  font-weight: 600;
+}
+tbody tr:hover {
+  background: #f9fafb;
+}
