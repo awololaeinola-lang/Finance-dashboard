@@ -1,0 +1,31 @@
+.sidebar {
+  width: 240px;
+  background: #111827;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #9ca3af;
+  text-decoration: none;
+  margin-bottom: 14px;
+}
+
+.sidebar nav a.active {
+  color: #fff;
+  font-weight: 600;
+}
+.sidebar nav a {
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.sidebar nav a:hover {
+  background: rgba(255,255,255,0.1);
+}

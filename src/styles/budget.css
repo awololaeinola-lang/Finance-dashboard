@@ -1,0 +1,55 @@
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.budget-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.budget-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.budget-bar {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.budget-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.budget-fill.safe {
+  background: #16a34a;
+}
+
+.budget-fill.over {
+  background: #dc2626;
+}
+
+.safe-text {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.over-text {
+  color: #dc2626;
+  font-weight: 600;
+}
