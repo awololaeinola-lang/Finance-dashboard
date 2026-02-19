@@ -1,8 +1,13 @@
+
+
+/* Subtitle */
 .subtitle {
   color: #6b7280;
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 
+/* Report Cards Grid */
 .report-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -10,23 +15,33 @@
   margin-bottom: 30px;
 }
 
+/* Single Report Card */
 .report-card {
   background: #ffffff;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .report-card p {
   color: #6b7280;
   margin-bottom: 6px;
+  font-size: 0.95rem;
 }
 
+/* Monthly Report Section */
 .monthly-report {
   background: #ffffff;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
 }
 
 .month-row {
@@ -48,4 +63,33 @@
   height: 100%;
   background: #4f46e5;
   border-radius: 10px;
+  transition: width 0.4s ease;
 }
+
+/* ======================
+   MOBILE RESPONSIVE
+====================== */
+@media (max-width: 768px) {
+  .report-cards {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+
+  .month-row {
+    grid-template-columns: 1fr; /* stack vertically */
+    row-gap: 6px;
+  }
+
+  .month-row span,
+  .month-row .report-bar {
+    width: 100%; /* fill width on mobile */
+  }
+
+  .monthly-report {
+    padding: 16px;
+  }
+
+  .report-card {
+    padding: 16px;
+  }
+}
+

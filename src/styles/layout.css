@@ -1,3 +1,5 @@
+
+
 * {
   box-sizing: border-box;
 }
@@ -39,4 +41,90 @@ button {
 button:hover {
   transform: translateY(-1px);
   opacity: 0.9;
+}
+
+
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+/* App Layout */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar handled separately in sidebar.css */
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page-content {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/* Headings & Paragraphs */
+h1 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+p {
+  line-height: 1.6;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+button {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column; /* Stack sidebar & content */
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .page-content {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
 }

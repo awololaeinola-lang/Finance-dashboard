@@ -1,14 +1,18 @@
+
+
 .subtitle {
   color: #6b7280;
   margin-bottom: 20px;
 }
 
+/* Budget Grid */
 .budget-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
 
+/* Individual Budget Card */
 .budget-card {
   background: #ffffff;
   padding: 20px;
@@ -16,13 +20,16 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Header inside card */
 .budget-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
   font-weight: 600;
+  gap: 8px;
 }
 
+/* Progress bar */
 .budget-bar {
   height: 10px;
   background: #e5e7eb;
@@ -44,6 +51,7 @@
   background: #dc2626;
 }
 
+/* Text colors */
 .safe-text {
   color: #16a34a;
   font-weight: 600;
@@ -52,4 +60,27 @@
 .over-text {
   color: #dc2626;
   font-weight: 600;
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .budget-list {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 16px;
+  }
+
+  .budget-card {
+    padding: 16px; /* Slightly smaller padding */
+  }
+
+  .budget-header {
+    flex-direction: column; /* Stack title/value */
+    align-items: flex-start;
+  }
+
+  .budget-bar {
+    height: 8px; /* slightly smaller on mobile */
+  }
 }

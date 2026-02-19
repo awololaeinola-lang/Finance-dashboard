@@ -1,18 +1,32 @@
+
+
+/* ===========================
+   SUBTITLE
+=========================== */
 .subtitle {
   color: #6b7280;
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 
+/* ===========================
+   TABLE CARD
+=========================== */
 .table-card {
   background: #ffffff;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow-x: auto; /* allow horizontal scroll on small screens */
 }
 
+/* ===========================
+   TABLE STYLING
+=========================== */
 table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 500px; /* ensures scroll if table too wide for mobile */
 }
 
 th {
@@ -25,6 +39,7 @@ th {
 td {
   padding: 14px 0;
   border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
 }
 
 .income {
@@ -36,6 +51,48 @@ td {
   color: red;
   font-weight: 600;
 }
+
 tbody tr:hover {
   background: #f9fafb;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  .table-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+
+  table {
+    min-width: 100%; /* make table fit screen if possible */
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  .table-card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  th, td {
+    font-size: 12px;
+    padding: 8px 0;
+  }
 }

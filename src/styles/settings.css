@@ -1,8 +1,13 @@
+
+
+/* Subtitle */
 .subtitle {
   color: #6b7280;
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 
+/* Grid layout */
 .settings-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -10,15 +15,23 @@
   margin-bottom: 20px;
 }
 
+/* Settings card */
 .settings-card {
   background: #ffffff;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .settings-card h3 {
   margin-bottom: 16px;
+  font-size: 1.1rem;
 }
 
 .settings-card label {
@@ -35,15 +48,23 @@
   margin-bottom: 14px;
   border-radius: 8px;
   border: 1px solid #d1d5db;
+  font-size: 0.95rem;
 }
 
+/* Toggle row */
 .toggle-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
+  flex-wrap: wrap;
 }
 
+.toggle-row span {
+  margin-bottom: 6px; /* ensures spacing on wrap */
+}
+
+/* Save button */
 .save-btn {
   padding: 12px 24px;
   border: none;
@@ -52,4 +73,26 @@
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
+  width: 100%; /* mobile full-width */
+  max-width: 200px; /* desktop size cap */
+  display: block;
+  margin-top: 10px;
+}
+
+/* ======================
+   MOBILE RESPONSIVE
+====================== */
+@media (max-width: 768px) {
+  .settings-grid {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+
+  .settings-card {
+    padding: 16px;
+  }
+
+  .save-btn {
+    width: 100%; /* full width on mobile */
+    font-size: 0.95rem;
+  }
 }

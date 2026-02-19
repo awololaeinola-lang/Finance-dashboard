@@ -1,9 +1,12 @@
+
+/* Chart Card */
 .chart-card {
   background: #ffffff;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   flex: 1;
+  min-width: 0; /* prevent overflow in flex layouts */
 }
 
 .chart-title {
@@ -15,4 +18,24 @@
 .line-chart {
   width: 100%;
   height: 140px;
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .chart-card {
+    width: 100%; /* full width on mobile */
+    margin-bottom: 16px;
+    padding: 16px;
+  }
+
+  .chart-title {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .line-chart {
+    height: 120px; /* slightly smaller for mobile */
+  }
 }

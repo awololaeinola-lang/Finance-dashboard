@@ -1,14 +1,17 @@
+/* Subtitle */
 .subtitle {
   color: #6b7280;
   margin-bottom: 20px;
 }
 
+/* Categories Grid */
 .categories-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
 
+/* Individual Category Card */
 .category-card {
   background: #ffffff;
   padding: 20px;
@@ -16,6 +19,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Card Header */
 .category-header {
   display: flex;
   justify-content: space-between;
@@ -23,6 +27,7 @@
   font-weight: 600;
 }
 
+/* Progress Bar */
 .progress-bar {
   height: 10px;
   background: #e5e7eb;
@@ -35,4 +40,27 @@
   height: 100%;
   background: #111827;
   border-radius: 10px;
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .categories-list {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 16px;
+  }
+
+  .category-card {
+    padding: 16px;
+  }
+
+  .category-header {
+    flex-direction: column; /* Stack title and value vertically */
+    gap: 6px;
+  }
+
+  .progress-bar {
+    height: 8px;
+  }
 }
